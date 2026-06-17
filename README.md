@@ -74,9 +74,11 @@ python -m venv .venv
 Ative o ambiente:
 
 ```powershell
-.venv\Scripts\Activate.ps1
+windows: .venv\Scripts\Activate.ps1
+
+linux: source .venv/bin/activate
 ```
-> Em caso de erro de execução de scripts desabilitado no sistema, rodar o comando: 
+> Em caso de erro de execução de scripts desabilitado no sistema windows, rodar o comando: 
 > Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 > Para liberar a janela do PowerShell
 
