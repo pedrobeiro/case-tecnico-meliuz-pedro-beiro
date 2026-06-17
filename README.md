@@ -6,9 +6,15 @@ A solução interpreta solicitações em linguagem natural, compara grupos, iden
 
 ## Configuração do `.env`
 
-Copie o arquivo `.env.example` e renomeie a cópia para `.env`.
+Copie o arquivo `.env.example` e renomeie a cópia para `.env`, via:
 
-Exemplo:
+```powershell
+Copy-Item .env.example .env
+```
+
+Garanta que arquivo .env está salvo no diretório.
+
+Exemplo da .env:
 
 ```env
 GEMINI_API_KEY=
@@ -42,6 +48,12 @@ No Windows, execute o arquivo:
 run.bat
 ```
 
+No linux, execute o arquivo:
+
+```text
+run.sh
+```
+
 O script realiza automaticamente:
 
 - criação do ambiente virtual `.venv`;
@@ -53,7 +65,7 @@ O script realiza automaticamente:
 
 ### Execução manual
 
-Na pasta raiz do projeto, crie o ambiente virtual:
+Na pasta raiz do projeto, crie o ambiente virtual via PowerShell:
 
 ```powershell
 python -m venv .venv
@@ -64,6 +76,9 @@ Ative o ambiente:
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
+> Em caso de erro de execução de scripts desabilitado no sistema, rodar o comando: 
+> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+> Para liberar a janela do PowerShell
 
 Atualize o `pip`:
 
@@ -77,11 +92,18 @@ Instale as dependências:
 python -m pip install -r requirements.txt
 ```
 
+Então, adicione .env e siga instruções da seção "Configuração do `.env`"
+
+```powershell
+Copy-Item .env.example .env
+```
+
 Execute a aplicação:
 
 ```powershell
 python -m streamlit run scripts/app.py
 ```
+
 
 Para encerrar o ambiente virtual:
 
