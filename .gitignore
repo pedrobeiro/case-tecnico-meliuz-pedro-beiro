@@ -1,0 +1,45 @@
+# Credenciais e variáveis locais
+.env
+.env.*
+!.env.example
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Cache e artefatos do Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Pacotes e distribuições
+build/
+dist/
+*.egg-info/
+
+# Resultados gerados durante a execução
+outputs/
+scripts/outputs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
